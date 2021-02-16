@@ -1,0 +1,15 @@
+/*The best way to create a CSS Grid with the structure I proposed is to use subgrid.
+Unfortunately, most browsers don't support subgrid yet.
+In the meantime, the best way is to create two separate grids—one for .day-of-week and one for .date-grid.
+
+/* The grid */
+.day-of-week,
+.date-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+/* Positioning the first day on a Friday */
+.date-grid button:first-child {
+  grid-column: 6;
+}
